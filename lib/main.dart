@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:skybus/Login/LoginView.dart';
-import 'package:skybus/SplashScreen/SplashScreen.dart';
+import 'package:skybus/UI/Login/LoginView.dart';
+import 'package:skybus/UI/SignUp/SignUpView.dart';
+import 'package:skybus/UI/SplashScreen/SplashScreen.dart';
 import 'package:skybus/core/Theme.dart';
 
 void main() {
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
       routes: {
         SplashScreen.routeName: (_) => SplashScreen(),
         LoginView.routeName: (_) => LoginView(),
+        SignUpView.routeName: (_) => SignUpView(),
       },
       initialRoute: SplashScreen.routeName,
       theme: myTheme.basicTheme,

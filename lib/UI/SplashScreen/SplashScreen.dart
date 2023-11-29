@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:skybus/Login/LoginView.dart';
+import 'package:skybus/UI/Login/LoginView.dart';
 
 class SplashScreen extends StatelessWidget {
   static const String routeName = 'Splash Screen';

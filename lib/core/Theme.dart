@@ -15,7 +15,15 @@ class myTheme{
         displaySmall: TextStyle(
             fontSize: 12,
             color: Colors.white
-        )
+        ),
+      displayMedium: TextStyle(
+        fontSize: 16,
+        color: Colors.white
+      ),
+      displayLarge: TextStyle(
+        fontSize: 24,
+        color: Colors.white
+      )
     ),
     //theme for Elevated button
     elevatedButtonTheme: ElevatedButtonThemeData(
