@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:skybus/UI/ForgetPassword/ForgetPasswordView.dart';
 import 'package:skybus/UI/Login/LoginView.dart';
 import 'package:skybus/UI/SignUp/SignUpView.dart';
 import 'package:skybus/UI/SplashScreen/SplashScreen.dart';
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
         SplashScreen.routeName: (_) => SplashScreen(),
         LoginView.routeName: (_) => LoginView(),
         SignUpView.routeName: (_) => SignUpView(),
+        ForgetPasswordView.routeName:(_) => ForgetPasswordView(),
       },
       initialRoute: SplashScreen.routeName,
       theme: myTheme.basicTheme,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:skybus/UI/ForgetPassword/ForgetPasswordView.dart';
 import 'package:skybus/UI/Login/LoginNavigator.dart';
 import 'package:skybus/UI/Login/LoginViewModel.dart';
 import 'package:skybus/UI/SignUp/SignUpView.dart';
@@ -25,7 +26,7 @@ class _LoginViewState extends BaseState<LoginView , LoginViewModel>
         elevation: 0,
       ),
       body: Container(
-        color: const Color(0xff0D3E46),
+        color: myTheme.darkGreen,
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
@@ -58,7 +59,7 @@ class _LoginViewState extends BaseState<LoginView , LoginViewModel>
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         TextButton(
-                          onPressed: () {},
+                          onPressed: goToForgetPassword,
                           child: Text(
                             "Forget password?",
                             style: myTheme.basicTheme.textTheme.displaySmall,
@@ -70,7 +71,7 @@ class _LoginViewState extends BaseState<LoginView , LoginViewModel>
                       height: 10,
                     ),
                     ElevatedButton(
-                        onPressed: () {},
+                        onPressed: goToHomeScreen,
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -113,5 +114,10 @@ class _LoginViewState extends BaseState<LoginView , LoginViewModel>
   @override
   goToSignUp() {
     Navigator.pushReplacementNamed(context, SignUpView.routeName);
+  }
+
+  @override
+  goToForgetPassword() {
+    Navigator.pushReplacementNamed(context, ForgetPasswordView.routeName);
   }
 }
