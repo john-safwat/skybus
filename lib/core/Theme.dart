@@ -12,6 +12,7 @@ class myTheme{
     scaffoldBackgroundColor: Colors.transparent,
 
     textTheme: const TextTheme(
+
         displaySmall: TextStyle(
             fontSize: 12,
             color: Colors.white
@@ -27,6 +28,7 @@ class myTheme{
     ),
     //theme for Elevated button
     elevatedButtonTheme: ElevatedButtonThemeData(
+
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(myOrange),
           elevation: MaterialStateProperty.all(0),
