@@ -18,9 +18,9 @@ class MyApp extends StatelessWidget {
 
       debugShowCheckedModeBanner: false,
       routes: {
-        //SplashScreen.routeName: (_) => SplashScreen(),
-        //LoginView.routeName: (_) => LoginView(),
-       // SignUpView.routeName: (_) => SignUpView(),
+        SplashScreen.routeName: (_) => SplashScreen(),
+        LoginView.routeName: (_) => LoginView(),
+       SignUpView.routeName: (_) => SignUpView(),
         homescreen.routeName:(_)=>homescreen(),
 
       },
