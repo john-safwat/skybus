@@ -8,9 +8,11 @@ class myTheme{
 
 
   static ThemeData basicTheme = ThemeData(
+    appBarTheme: const AppBarTheme(
+      backgroundColor: darkGreen
+    ),
     //Screen background
     scaffoldBackgroundColor: Colors.transparent,
-
     textTheme: const TextTheme(
 
         displaySmall: TextStyle(

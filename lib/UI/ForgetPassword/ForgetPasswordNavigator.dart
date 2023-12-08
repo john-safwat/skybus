@@ -1,3 +1,5 @@
-abstract class ForgetPasswordNavigator{
+import 'package:skybus/core/Base/baseNavigator.dart';
 
+abstract class ForgetPasswordNavigator extends BaseNavigator{
+    goToLoginScreen();
 }

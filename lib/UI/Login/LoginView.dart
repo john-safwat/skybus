@@ -29,77 +29,79 @@ class _LoginViewState extends BaseState<LoginView , LoginViewModel>
         color: myTheme.darkGreen,
         child: Padding(
           padding: const EdgeInsets.all(20.0),
-          child: Column(
-            children: [
-              Image.asset(
-                "assets/images/logo.png",
-                width: double.infinity,
-              ),
-              const SizedBox(
-                height: 40,
-              ),
-              Form(
-                key: viewModel.formKey,
-                child: Column(
-                  children: [
-                    CustomTextField(
-                        validation: viewModel.emailValidation,
-                        controller: viewModel.emailController,
-                        label: "Email",
-                        inputType: TextInputType.emailAddress,
-                        icon: Icons.email_outlined),
-                    const SizedBox(height: 20),
-                    CustomTextField(
-                        validation: viewModel.passwordValidation,
-                        controller: viewModel.passwordController,
-                        label: "Password",
-                        inputType: TextInputType.visiblePassword,
-                        icon: Icons.lock_outline),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        TextButton(
-                          onPressed: goToForgetPassword,
-                          child: Text(
-                            "Forget password?",
-                            style: myTheme.basicTheme.textTheme.displaySmall,
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 10,
-                    ),
-                    ElevatedButton(
-                        onPressed: goToHomeScreen,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Text("Login",
-                                style: myTheme
-                                    .basicTheme.textTheme.displayMedium!
-                                    .copyWith(fontSize: 20)),
-                          ],
-                        ),
-                    ),
-                    const SizedBox(height: 20,),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text("Don't have Account?",
-                          style: myTheme.basicTheme.textTheme.displayMedium,
-                        ),
-                        TextButton(onPressed: goToSignUp,
-                            child: Text("Sign up",
-                              style: myTheme.basicTheme.textTheme.displayMedium!.copyWith(color: myTheme.oliveGreen),
-                            )
-                        )
-                      ],
-                    )
-                  ],
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Image.asset(
+                  "assets/images/logo.png",
+                  width: double.infinity,
                 ),
-              )
-            ],
+                const SizedBox(
+                  height: 40,
+                ),
+                Form(
+                  key: viewModel.formKey,
+                  child: Column(
+                    children: [
+                      CustomTextField(
+                          validation: viewModel.emailValidation,
+                          controller: viewModel.emailController,
+                          label: "Email",
+                          inputType: TextInputType.emailAddress,
+                          icon: Icons.email_outlined),
+                      const SizedBox(height: 20),
+                      CustomTextField(
+                          validation: viewModel.passwordValidation,
+                          controller: viewModel.passwordController,
+                          label: "Password",
+                          inputType: TextInputType.visiblePassword,
+                          icon: Icons.lock_outline),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          TextButton(
+                            onPressed: goToForgetPassword,
+                            child: Text(
+                              "Forget password?",
+                              style: myTheme.basicTheme.textTheme.displaySmall,
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      ElevatedButton(
+                          onPressed: goToHomeScreen,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text("Login",
+                                  style: myTheme
+                                      .basicTheme.textTheme.displayMedium!
+                                      .copyWith(fontSize: 20)),
+                            ],
+                          ),
+                      ),
+                      const SizedBox(height: 20,),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text("Don't have Account?",
+                            style: myTheme.basicTheme.textTheme.displayMedium,
+                          ),
+                          TextButton(onPressed: goToSignUp,
+                              child: Text("Sign up",
+                                style: myTheme.basicTheme.textTheme.displayMedium!.copyWith(color: myTheme.oliveGreen),
+                              )
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),
