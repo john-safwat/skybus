@@ -30,13 +30,16 @@ class LoginViewModel extends BaseViewModel<LoginNavigator>{
     return null;
   }
 
-  @override
-  goToHomeScreen() {
+  void goToHomeScreen() {
       navigator!.goToHomeScreen();
   }
 
-  @override
-  goToSignUp() {
+
+  void goToSignUp() {
     navigator!.goToSignUp();
+  }
+
+  void goToForgetPassword(){
+    navigator!.goToForgetPassword();
   }
 }

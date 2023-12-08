@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:skybus/Home/homescreen.dart';
+import 'package:skybus/UI/ForgetPassword/ForgetPasswordView.dart';
 import 'package:skybus/UI/Login/LoginView.dart';
 import 'package:skybus/UI/SignUp/SignUpView.dart';
 import 'package:skybus/UI/SplashScreen/SplashScreen.dart';
@@ -15,16 +15,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-
       debugShowCheckedModeBanner: false,
       routes: {
         SplashScreen.routeName: (_) => SplashScreen(),
         LoginView.routeName: (_) => LoginView(),
-       SignUpView.routeName: (_) => SignUpView(),
-        homescreen.routeName:(_)=>homescreen(),
-
+        SignUpView.routeName: (_) => SignUpView(),
+        ForgetPasswordView.routeName:(_) => ForgetPasswordView(),
       },
-      initialRoute: homescreen.routeName,
+      initialRoute: SplashScreen.routeName,
       theme: myTheme.basicTheme,
     );
 
