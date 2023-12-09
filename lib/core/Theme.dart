@@ -30,7 +30,6 @@ class myTheme{
     ),
     //theme for Elevated button
     elevatedButtonTheme: ElevatedButtonThemeData(
-
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(myOrange),
           elevation: MaterialStateProperty.all(0),
@@ -38,7 +37,7 @@ class myTheme{
             borderRadius: BorderRadius.circular(10),
           )),
           textStyle: MaterialStateProperty.all(const TextStyle(
-              fontWeight: FontWeight.bold, fontSize: 20, color: Colors.white)),
+              fontWeight: FontWeight.bold, fontSize: 30, color: Colors.white)),
         )),
   );
 }
