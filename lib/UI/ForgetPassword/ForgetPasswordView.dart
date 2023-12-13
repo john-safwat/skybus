@@ -15,43 +15,50 @@ class ForgetPasswordView extends StatefulWidget {
   State<ForgetPasswordView> createState() => _ForgetPasswordViewState();
 }
 
-class _ForgetPasswordViewState extends  BaseState<ForgetPasswordView , ForgetPasswordViewModel>
+class _ForgetPasswordViewState
+    extends BaseState<ForgetPasswordView, ForgetPasswordViewModel>
     implements ForgetPasswordNavigator {
   ForgetPasswordViewModel viewModel = ForgetPasswordViewModel();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: Container(
-        color: myTheme.darkGreen,
-        child: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: SingleChildScrollView(
+      backgroundColor: myTheme.darkGreen,
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
             child: Column(
               children: [
-                  Image.asset("assets/images/logo.png"),
-                  const SizedBox(height: 20,),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text("Forget password",
-                        style: myTheme.basicTheme.textTheme.displayLarge,
-                      ),
-
-                    ],
-                  ),
-                SvgPicture.asset("assets/svj/forgetPassword.svg",
+                const SizedBox(height: 70,),
+                Image.asset("assets/images/logo.png"),
+                const SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "Forget password",
+                      style: myTheme.basicTheme.textTheme.displayLarge,
+                    ),
+                  ],
+                ),
+                SvgPicture.asset(
+                  "assets/svj/forgetPassword.svg",
                   height: 250,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Text("Enter your Email so we can send \n you a Link",
+                    Text(
+                      "Enter your Email so we can send \n you a Link",
                       style: myTheme.basicTheme.textTheme.displayMedium,
                     ),
                   ],
                 ),
-                const SizedBox(height: 20,),
+                const SizedBox(
+                  height: 20,
+                ),
                 CustomTextField(
                   controller: viewModel.resetPasswordController,
                   label: "Enter Email",
@@ -59,27 +66,26 @@ class _ForgetPasswordViewState extends  BaseState<ForgetPasswordView , ForgetPas
                   icon: EvaIcons.emailOutline,
                   inputType: TextInputType.emailAddress,
                 ),
-                const SizedBox(height: 20,),
+                const SizedBox(
+                  height: 30,
+                ),
                 ElevatedButton(
                   onPressed: goToLoginScreen,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text("Login",
-                          style: myTheme
-                              .basicTheme.textTheme.displayMedium!
+                      Text("Send",
+                          style: myTheme.basicTheme.textTheme.displayMedium!
                               .copyWith(fontSize: 20)),
                     ],
                   ),
                 ),
-
               ],
             ),
           ),
         ),
       ),
     );
-
   }
 
   @override

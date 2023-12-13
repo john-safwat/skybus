@@ -21,17 +21,14 @@ class _LoginViewState extends BaseState<LoginView , LoginViewModel>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: const Color(0xff0D3E46),
-        elevation: 0,
-      ),
-      body: Container(
-        color: myTheme.darkGreen,
-        child: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: SingleChildScrollView(
+      backgroundColor: myTheme.darkGreen,
+      body: SafeArea(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
             child: Column(
               children: [
+                const SizedBox(height: 100,),
                 Image.asset(
                   "assets/images/logo.png",
                   width: double.infinity,
