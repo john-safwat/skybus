@@ -21,11 +21,11 @@ class _SignUpViewState extends BaseState<SignUpView, SignUpViewModel>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: myTheme.darkGreen,
+        backgroundColor: MyTheme.darkGreen,
         elevation: 0,
       ),
       body: Container(
-        color: myTheme.darkGreen,
+        color: MyTheme.darkGreen,
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Column(
@@ -39,7 +39,7 @@ class _SignUpViewState extends BaseState<SignUpView, SignUpViewModel>
                 children: [
                   Text(
                     "SignUp",
-                    style: myTheme.basicTheme.textTheme.displayLarge,
+                    style: MyTheme.basicTheme.textTheme.displayLarge,
                   )
                 ],
               ),
@@ -82,7 +82,7 @@ class _SignUpViewState extends BaseState<SignUpView, SignUpViewModel>
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text("Sign Up",
-                        style: myTheme.basicTheme.textTheme.displayMedium!
+                        style: MyTheme.basicTheme.textTheme.displayMedium!
                             .copyWith(fontSize: 20)),
                   ],
                 ),
@@ -95,14 +95,14 @@ class _SignUpViewState extends BaseState<SignUpView, SignUpViewModel>
                 children: [
                   Text(
                     "Already have account?",
-                    style: myTheme.basicTheme.textTheme.displaySmall,
+                    style: MyTheme.basicTheme.textTheme.displaySmall,
                   ),
                   TextButton(
                       onPressed: goToLogin,
                       child: Text(
                         "SignIn",
-                        style: myTheme.basicTheme.textTheme.displaySmall!
-                            .copyWith(color: myTheme.oliveGreen),
+                        style: MyTheme.basicTheme.textTheme.displaySmall!
+                            .copyWith(color: MyTheme.oliveGreen),
                       )),
                 ],
               )

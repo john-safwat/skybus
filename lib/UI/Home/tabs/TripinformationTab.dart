@@ -9,7 +9,7 @@ class Tripinfo extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: myTheme.darkGreen,
+        backgroundColor: MyTheme.darkGreen,
         centerTitle: true,
         title: const Text('Trip information'),
         leading: BackButton(
@@ -32,7 +32,7 @@ class Tripinfo extends StatelessWidget {
                   Text(
                     'Your Ticket',
                     style: TextStyle(
-                        color: myTheme.darkGreen, fontWeight: FontWeight.bold),
+                        color: MyTheme.darkGreen, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(
                     height: 20,
@@ -40,7 +40,7 @@ class Tripinfo extends StatelessWidget {
                   Row(children: [
                     Text(
                       'Bashar walid',
-                      style: (TextStyle(color: myTheme.darkGreen)),
+                      style: (TextStyle(color: MyTheme.darkGreen)),
                     )
                   ]),
                   Row(children: [
@@ -64,7 +64,7 @@ class Tripinfo extends StatelessWidget {
                       Icon(
                         Icons.circle_outlined,
                         size: 10,
-                        color: myTheme.myOrange,
+                        color: MyTheme.myOrange,
                       ),
                       Text('----------------------'),
                       Icon(
@@ -83,13 +83,13 @@ class Tripinfo extends StatelessWidget {
                       Text(
                         'Obour city',
                         style: TextStyle(
-                            color: myTheme.myOrange,
+                            color: MyTheme.myOrange,
                             fontWeight: FontWeight.bold),
                       ),
                       Text(
                         'October  city',
                         style: TextStyle(
-                            color: myTheme.myOrange,
+                            color: MyTheme.myOrange,
                             fontWeight: FontWeight.bold),
                       )
                     ],
@@ -179,7 +179,7 @@ class Tripinfo extends StatelessWidget {
             child: ElevatedButton(
               onPressed: () {},
               style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(myTheme.myOrange),
+                backgroundColor: MaterialStateProperty.all(MyTheme.myOrange),
                 elevation: MaterialStateProperty.all(0),
                 shape: MaterialStateProperty.all(RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(18),
@@ -192,7 +192,7 @@ class Tripinfo extends StatelessWidget {
               child: Container(
                   padding: const EdgeInsets.all(20),
                   child: Text('Download Ticket' ,
-                    style: myTheme.basicTheme.textTheme.displayMedium,
+                    style: MyTheme.basicTheme.textTheme.displayMedium,
                   )
               ),
             ),

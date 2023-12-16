@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:skybus/UI/ForgetPassword/ForgetPasswordView.dart';
+import 'package:skybus/UI/Home/homescreen.dart';
 import 'package:skybus/UI/Login/LoginNavigator.dart';
 import 'package:skybus/UI/Login/LoginViewModel.dart';
 import 'package:skybus/UI/SignUp/SignUpView.dart';
@@ -21,7 +22,7 @@ class _LoginViewState extends BaseState<LoginView , LoginViewModel>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: myTheme.darkGreen,
+      backgroundColor: MyTheme.darkGreen,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
@@ -31,7 +32,7 @@ class _LoginViewState extends BaseState<LoginView , LoginViewModel>
                 const SizedBox(height: 100,),
                 Image.asset(
                   "assets/images/logo.png",
-                  width: double.infinity,
+                  width: MediaQuery.sizeOf(context).width * 0.6,
                 ),
                 const SizedBox(
                   height: 40,
@@ -60,7 +61,7 @@ class _LoginViewState extends BaseState<LoginView , LoginViewModel>
                             onPressed: goToForgetPassword,
                             child: Text(
                               "Forget password?",
-                              style: myTheme.basicTheme.textTheme.displaySmall,
+                              style: MyTheme.basicTheme.textTheme.displaySmall,
                             ),
                           ),
                         ],
@@ -74,7 +75,7 @@ class _LoginViewState extends BaseState<LoginView , LoginViewModel>
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text("Login",
-                                  style: myTheme
+                                  style: MyTheme
                                       .basicTheme.textTheme.displayMedium!
                                       .copyWith(fontSize: 20)),
                             ],
@@ -85,11 +86,11 @@ class _LoginViewState extends BaseState<LoginView , LoginViewModel>
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text("Don't have Account?",
-                            style: myTheme.basicTheme.textTheme.displayMedium,
+                            style: MyTheme.basicTheme.textTheme.displayMedium,
                           ),
                           TextButton(onPressed: goToSignUp,
                               child: Text("Sign up",
-                                style: myTheme.basicTheme.textTheme.displayMedium!.copyWith(color: myTheme.oliveGreen),
+                                style: MyTheme.basicTheme.textTheme.displayMedium!.copyWith(color: MyTheme.oliveGreen),
                               )
                           )
                         ],
@@ -107,7 +108,7 @@ class _LoginViewState extends BaseState<LoginView , LoginViewModel>
 
   @override
   goToHomeScreen() {
-
+    Navigator.pushReplacementNamed(context, HomeScreen.routeName);
   }
 
   @override

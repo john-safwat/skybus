@@ -44,11 +44,11 @@ class _homescreenState extends State<HomeScreen> {
       body:tabs[index] ,
 
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: myTheme.darkGreen,
+        backgroundColor: MyTheme.darkGreen,
         enableFeedback: false,
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        selectedItemColor: myTheme.myOrange,
+        selectedItemColor: MyTheme.myOrange,
         unselectedItemColor: Colors.white,
         type: BottomNavigationBarType.fixed,
         items: items,
