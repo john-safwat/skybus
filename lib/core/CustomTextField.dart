@@ -19,14 +19,14 @@ class CustomTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       autovalidateMode: AutovalidateMode.onUserInteraction,
-      style: myTheme.basicTheme.textTheme.displayMedium,
+      style: MyTheme.basicTheme.textTheme.displayMedium,
       validator: (value) => validation(value),
       controller: controller,
       decoration: InputDecoration(
         hintText: label,
-        hintStyle: myTheme.basicTheme.textTheme.displaySmall,
+        hintStyle: MyTheme.basicTheme.textTheme.displaySmall,
         prefixIcon: Icon(icon),
-        prefixIconColor: myTheme.oliveGreen,
+        prefixIconColor: MyTheme.oliveGreen,
         border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(15),
             borderSide:const BorderSide(
