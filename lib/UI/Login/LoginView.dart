@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:skybus/UI/ForgetPassword/ForgetPasswordView.dart';
+import 'package:skybus/UI/Home/homescreen.dart';
 import 'package:skybus/UI/Login/LoginNavigator.dart';
 import 'package:skybus/UI/Login/LoginViewModel.dart';
 import 'package:skybus/UI/SignUp/SignUpView.dart';
@@ -107,7 +108,7 @@ class _LoginViewState extends BaseState<LoginView , LoginViewModel>
 
   @override
   goToHomeScreen() {
-
+    Navigator.pushReplacementNamed(context, HomeScreen.routeName);
   }
 
   @override

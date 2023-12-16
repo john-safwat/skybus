@@ -3,6 +3,7 @@ import 'package:skybus/UI/Home/tabs/SettingsTab.dart';
 import 'package:skybus/UI/Home/tabs/TripinformationTab.dart';
 import 'package:skybus/UI/Home/tabs/HomeTab.dart';
 import 'package:skybus/UI/Home/tabs/ProfileTab.dart';
+import 'package:skybus/UI/Home/tabs/TripTickets.dart';
 
 import 'package:skybus/core/Theme.dart';
 
@@ -17,7 +18,7 @@ class _homescreenState extends State<HomeScreen> {
   int index=0;
   @override
   Widget build(BuildContext context) {
-    List<Widget> tabs=[HomeTab(),Tripinfo(),const Settings(),profile()];
+    List<Widget> tabs=[HomeTab(),TripTickets(),Tripinfo(),profile()];
     const List<BottomNavigationBarItem> items=[
       BottomNavigationBarItem(icon: Icon(Icons.home),
           label: "home"
