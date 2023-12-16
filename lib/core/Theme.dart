@@ -5,7 +5,7 @@ class MyTheme{
   static const Color darkGreen= Color(0xff0D3E46);
   static const Color myOrange= Color(0xffF4931E);
   static const Color grey= Color(0xff617174);
-
+  static const Color OffWhite= Color(0xfff8f8f8);
 
   static ThemeData basicTheme = ThemeData(
     appBarTheme: const AppBarTheme(
