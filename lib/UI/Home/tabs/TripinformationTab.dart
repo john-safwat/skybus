@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:skybus/core/Theme.dart';
 
 class Tripinfo extends StatelessWidget {
+  static const String routeName='home';
   Tripinfo({super.key});
 
   @override
