@@ -25,7 +25,7 @@ class TripCard extends StatelessWidget {
                 Container(
                   padding:const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                   decoration: BoxDecoration(
-                    color: MyTheme.oliveGreen, 
+                    color: myTheme.oliveGreen,
                     borderRadius: BorderRadius.circular(100),
                   ),
                   child: Text("SAT 29,Jul 2023" , style: Theme.of(context).textTheme.displaySmall!.copyWith(color: Colors.black),),
@@ -41,9 +41,9 @@ class TripCard extends StatelessWidget {
                 const SizedBox(height: 10),
                 Row(
                   children: [
-                    Text("09:00 am" , style: Theme.of(context).textTheme.displaySmall!.copyWith(color: MyTheme.grey, fontWeight: FontWeight.bold),),
+                    Text("09:00 am" , style: Theme.of(context).textTheme.displaySmall!.copyWith(color: myTheme.grey, fontWeight: FontWeight.bold),),
                     Expanded(child: Container( )),
-                    Text("12L00 pm" , style: Theme.of(context).textTheme.displaySmall!.copyWith(color: MyTheme.grey, fontWeight: FontWeight.bold),),
+                    Text("12L00 pm" , style: Theme.of(context).textTheme.displaySmall!.copyWith(color: myTheme.grey, fontWeight: FontWeight.bold),),
                   ],
                 ),
                 const Divider(),

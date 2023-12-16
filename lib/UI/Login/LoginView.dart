@@ -22,7 +22,7 @@ class _LoginViewState extends BaseState<LoginView , LoginViewModel>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: MyTheme.darkGreen,
+      backgroundColor: myTheme.darkGreen,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
@@ -61,7 +61,7 @@ class _LoginViewState extends BaseState<LoginView , LoginViewModel>
                             onPressed: goToForgetPassword,
                             child: Text(
                               "Forget password?",
-                              style: MyTheme.basicTheme.textTheme.displaySmall,
+                              style: myTheme.basicTheme.textTheme.displaySmall,
                             ),
                           ),
                         ],
@@ -75,7 +75,7 @@ class _LoginViewState extends BaseState<LoginView , LoginViewModel>
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text("Login",
-                                  style: MyTheme
+                                  style: myTheme
                                       .basicTheme.textTheme.displayMedium!
                                       .copyWith(fontSize: 20)),
                             ],
@@ -86,11 +86,11 @@ class _LoginViewState extends BaseState<LoginView , LoginViewModel>
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text("Don't have Account?",
-                            style: MyTheme.basicTheme.textTheme.displayMedium,
+                            style: myTheme.basicTheme.textTheme.displayMedium,
                           ),
                           TextButton(onPressed: goToSignUp,
                               child: Text("Sign up",
-                                style: MyTheme.basicTheme.textTheme.displayMedium!.copyWith(color: MyTheme.oliveGreen),
+                                style: myTheme.basicTheme.textTheme.displayMedium!.copyWith(color: myTheme.oliveGreen),
                               )
                           )
                         ],

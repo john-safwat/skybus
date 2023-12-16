@@ -18,7 +18,7 @@ class _homescreenState extends State<HomeScreen> {
   int index=0;
   @override
   Widget build(BuildContext context) {
-    List<Widget> tabs=[HomeTab(),TripTickets(),Tripinfo(),profile()];
+    List<Widget> tabs=[HomeTab(),TripTickets(),Settings(),Profile()];
     const List<BottomNavigationBarItem> items=[
       BottomNavigationBarItem(icon: Icon(Icons.home),
           label: "home"
@@ -45,11 +45,11 @@ class _homescreenState extends State<HomeScreen> {
       body:tabs[index] ,
 
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: MyTheme.darkGreen,
+        backgroundColor: myTheme.darkGreen,
         enableFeedback: false,
         showSelectedLabels: false,
         showUnselectedLabels: false,
-        selectedItemColor: MyTheme.myOrange,
+        selectedItemColor: myTheme.myOrange,
         unselectedItemColor: Colors.white,
         type: BottomNavigationBarType.fixed,
         items: items,

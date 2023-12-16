@@ -1,20 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:skybus/core/Theme.dart';
 
-class Tripinfo extends StatelessWidget {
-  static const String routeName='home';
+class Tripinfo extends StatefulWidget {
+  static const String routeName='Trip info';
   Tripinfo({super.key});
 
+  @override
+  State<Tripinfo> createState() => _TripinfoState();
+}
+
+class _TripinfoState extends State<Tripinfo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: MyTheme.darkGreen,
+        backgroundColor: myTheme.darkGreen,
         centerTitle: true,
-        title: const Text('Trip information'),
+        title: const Text('Trip information',
+          style: TextStyle(
+            color: myTheme.OffWhite
+          ),
+        ),
         leading: BackButton(
-          onPressed: () {},
+          onPressed: goBack,
+          color: myTheme.OffWhite,
         ),
       ),
       body: Column(
@@ -33,7 +43,7 @@ class Tripinfo extends StatelessWidget {
                   Text(
                     'Your Ticket',
                     style: TextStyle(
-                        color: MyTheme.darkGreen, fontWeight: FontWeight.bold),
+                        color: myTheme.darkGreen, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(
                     height: 20,
@@ -41,7 +51,7 @@ class Tripinfo extends StatelessWidget {
                   Row(children: [
                     Text(
                       'Bashar walid',
-                      style: (TextStyle(color: MyTheme.darkGreen)),
+                      style: (TextStyle(color: myTheme.darkGreen)),
                     )
                   ]),
                   Row(children: [
@@ -65,7 +75,7 @@ class Tripinfo extends StatelessWidget {
                       Icon(
                         Icons.circle_outlined,
                         size: 10,
-                        color: MyTheme.myOrange,
+                        color: myTheme.myOrange,
                       ),
                       Text('----------------------'),
                       Icon(
@@ -84,13 +94,13 @@ class Tripinfo extends StatelessWidget {
                       Text(
                         'Obour city',
                         style: TextStyle(
-                            color: MyTheme.myOrange,
+                            color: myTheme.myOrange,
                             fontWeight: FontWeight.bold),
                       ),
                       Text(
                         'October  city',
                         style: TextStyle(
-                            color: MyTheme.myOrange,
+                            color: myTheme.myOrange,
                             fontWeight: FontWeight.bold),
                       )
                     ],
@@ -180,7 +190,7 @@ class Tripinfo extends StatelessWidget {
             child: ElevatedButton(
               onPressed: () {},
               style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(MyTheme.myOrange),
+                backgroundColor: MaterialStateProperty.all(myTheme.myOrange),
                 elevation: MaterialStateProperty.all(0),
                 shape: MaterialStateProperty.all(RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(18),
@@ -193,7 +203,7 @@ class Tripinfo extends StatelessWidget {
               child: Container(
                   padding: const EdgeInsets.all(20),
                   child: Text('Download Ticket' ,
-                    style: MyTheme.basicTheme.textTheme.displayMedium,
+                    style: myTheme.basicTheme.textTheme.displayMedium,
                   )
               ),
             ),
@@ -201,5 +211,8 @@ class Tripinfo extends StatelessWidget {
         ],
       ),
     );
+  }
+  void goBack(){
+    Navigator.pop(context);
   }
 }

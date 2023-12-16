@@ -22,7 +22,7 @@ class _ForgetPasswordViewState
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: MyTheme.darkGreen,
+      backgroundColor: myTheme.darkGreen,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
@@ -38,7 +38,7 @@ class _ForgetPasswordViewState
                   children: [
                     Text(
                       "Forget password",
-                      style: MyTheme.basicTheme.textTheme.displayLarge,
+                      style: myTheme.basicTheme.textTheme.displayLarge,
                     ),
                   ],
                 ),
@@ -51,7 +51,7 @@ class _ForgetPasswordViewState
                   children: [
                     Text(
                       "Enter your Email so we can send \n you a Link",
-                      style: MyTheme.basicTheme.textTheme.displayMedium,
+                      style: myTheme.basicTheme.textTheme.displayMedium,
                     ),
                   ],
                 ),
@@ -74,7 +74,7 @@ class _ForgetPasswordViewState
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text("Send",
-                          style: MyTheme.basicTheme.textTheme.displayMedium!
+                          style: myTheme.basicTheme.textTheme.displayMedium!
                               .copyWith(fontSize: 20)),
                     ],
                   ),

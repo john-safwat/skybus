@@ -26,7 +26,7 @@ class RecentTrip extends StatelessWidget {
                     alignment: Alignment.topCenter,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(8),
-                      color: MyTheme.grey,
+                      color: myTheme.grey,
     ),
                        child: const Text('SAT 29, JUL 2023',style: TextStyle(fontSize:12 ),)),
                 ],

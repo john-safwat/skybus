@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class MyTheme{
+class myTheme{
   static const Color oliveGreen = Color(0xff9ECA9B);
   static const Color darkGreen= Color(0xff0D3E46);
   static const Color myOrange= Color(0xffF4931E);
